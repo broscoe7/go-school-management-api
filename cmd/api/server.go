@@ -75,7 +75,7 @@ func main() {
 		CheckQuery:                  true,
 		CheckBody:                   true,
 		CheckBodyOnlyForContentType: "application/x-www-form-urlencoded",
-		Whitelist:                   []string{"sortby", "sortOrder", "first_name", "last_name", "class", "email", "subject", "password", "username", "role"},
+		Whitelist:                   []string{"sortby", "sortOrder", "first_name", "last_name", "class", "email", "subject", "password", "username", "role", "page", "limit"},
 	}
 	jwtMiddleware := mw.MiddlewaresExcludePaths(mw.JWTMiddleware, "/execs/login", "/execs/forgot-password", "/execs/password/reset")
 	secureMux := utils.ApplyMiddlewares(
